@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+        function setup() {
+            createCanvas(600,600);
+        }
+
+        function draw() {
+            
+            background("grey")
+            stroke("black")
+            fill("red")
+            rect(200,200,100,200) 
+            rect(300,200,100,200)
+            fill("black")
+            rect(240,400,120,50)
+            rect(230,240,40,40)
+            rect(230,320,40,40)
+            rect(330,240,40,40)
+            rect(330,320,40,40)
+            fill("white")
+            ellipse(272,425,40,40)
+            ellipse(327,425,40,40)
+            fill("black")
+            strokeWeight(5)
+            line(200,220,140,220)
+            line(140,160,140,220)
+            line(200,380,140,380)
+            line(140,380,140,320)
+            line(200,300,140,300)
+            line(140,300,140,240)
+            line(400,220,460,220)
+            line(460,220,460,160)
+            line(400,300,460,300)
+            line(460,300,460,240)
+            line(400,380,460,380)
+            line(460,380,460,320)
+            fill("black")
+            strokeWeight(3)
+            text("Hi, name is Ms. Bug",190,100)
+            textSize(27)
+           
+            
+        }
+           
+ </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/USERNAME/p5js/blob/master/FILENAME.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+</html>
