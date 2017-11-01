@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+
+      function setup() {
+            createCanvas(800, 600);
+
+        }
+
+        function draw() {
+            //Draws triangles near the mouse
+            triangle(mouseX, mouseY, random(mouseX), random(mouseY), random(mouseX), random(mouseY));
+        }
+
+        function mouseMoved() {
+            //Keeps drawing triangles near the mouse
+            noFill();//No color
+            background(random(pmouseX), random(mouseX), random(pmouseY), random(mouseY));//random color
+            triangle(random(pmouseX), random(pmouseY), random(pmouseX), random(pmouseY), random(pmouseX), random(pmouseY));//random shape of triangle near the mouse
+            strokeWeight(10);//outline of the triangle
+        }
+
+        function keyPressed(){
+            //When the mouse is dragged, the dot will appeaer with the triangles and it will follow where ever the mouse goes 
+            //The traingle and background will automatically change colour too
+            background(random(pmouseX), random(mouseX), random(pmouseY), random(mouseY));//random color for the background
+            fill(random(100,255),random(100,200),random(100,200));//random color 
+            point(mouseX+50,mouseY+50);//the point would be 50 spaces away from the mouse
+            
+        }
+        
+      
+
+  
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/ashleyw4802/p5js/blob/master/interaction.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
