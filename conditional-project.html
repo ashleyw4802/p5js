@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+    
+    var centerX;
+    var centerY;
+    var centerX1;
+    var centerY1;
+    
+        function setup() {
+            createCanvas(700,500);
+            strokeWeight(5);
+            centerX = 200;
+            centerY = 300;
+            centerX1 = 400;
+            centerY1 = 300;
+            
+        }
+
+        function draw() {
+            
+            background("grey")
+
+            line(100,100,500,100); 
+           
+            fill("pink"); //pink flower
+            ellipse(centerX-25, centerY, 50, 25); // left
+            ellipse(centerX+25, centerY, 50, 25); // right
+            ellipse(centerX, centerY-25, 25, 50); // top
+            ellipse(centerX, centerY+25, 25, 50); // bottom
+            
+            fill("purple"); //purple flower
+            ellipse(centerX1-25, centerY1, 50, 25); // left
+            ellipse(centerX1+25, centerY1, 50, 25); // right
+            ellipse(centerX1, centerY1-25, 25, 50); // top
+            ellipse(centerX1, centerY1+25, 25, 50); // bottom
+            
+            if (keyCode == 81){ //if "q" is pressed
+                centerY -= 5 ; //pink flower goes up
+            }    
+            if (keyCode == 80){ //if "p" is pressed
+                centerY1 -=5 ; //purple flower goes up  
+            }    
+            if (centerY < 150){ //if the pinkr flower reaches the line
+                background("black");
+                fill("pink");
+                textSize(20);
+                text("Congrats Player Pink, You Won!",200,100); // Player pink wins
+            }
+            else if (centerY1 < 150){ //if the purple flower reaches the line
+                background("black");
+                fill("purple");
+                textSize(20);
+                text("Congrats Player Purple, You Won!",200,100); //Player purple wins
+                
+            }
+        }    
+            
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/ashleyw4802/p5js/blob/master/conditional-project.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
